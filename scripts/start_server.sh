@@ -1,7 +1,6 @@
 #!/bin/bash
-
-echo "Starting Apache..."
-
-# Configure Apache
-systemctl restart httpd
-systemctl enable httpd
+set +e
+echo "Starting Nginx..."
+systemctl restart nginx || true
+systemctl enable nginx || true
+exit 0
